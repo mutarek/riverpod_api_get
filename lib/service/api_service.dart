@@ -7,6 +7,7 @@ class ApiService{
      http.Response response = await http.get(url);
      if(response.statusCode == 200){
        List<dynamic> data = convert.jsonDecode(response.body);
+       return data;
      }
      return response;
    }
